@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavProgress from "./NavProgress";
 
 export default function Navbar() {
   return (
@@ -8,21 +9,13 @@ export default function Navbar() {
           <span className="rounded bg-indigo-600 px-2 py-0.5 text-white">py</span>
           struct
         </Link>
-        <div className="flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-          <Link href="/topics" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            All Topics
+
+        <div className="flex items-center gap-5 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+          <Link href="/tematy" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+            Tematy
           </Link>
-          <Link href="/topics?category=sorting" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Sorting
-          </Link>
-          <Link href="/topics?category=searching" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Searching
-          </Link>
-          <Link href="/topics?category=data-structures" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Data Structures
-          </Link>
-          <Link href="/topics?category=graphs" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Graphs
+          <Link href="/sciezka" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+            Ścieżka nauki
           </Link>
           <a
             href="https://github.com/poewer/pystruct"
@@ -32,6 +25,7 @@ export default function Navbar() {
           >
             GitHub
           </a>
+          <NavProgress />
         </div>
       </div>
     </nav>
